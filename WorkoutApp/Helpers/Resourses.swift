@@ -23,6 +23,9 @@ enum Resourses {
             static let progress = "Progress"
             static let settings = "Settings"
         }
+        enum NavBar {
+            static let overview = "Today"
+        }
         enum Overview {
             static let allWorkoutsButon = "All Workouts"
         }
@@ -36,6 +39,7 @@ enum Resourses {
         }
         enum Common {
             static let downArrow = UIImage(named: "down_arrow") ?? UIImage()
+            static let addButton = UIImage(named: "addButton") ?? UIImage()
         }
     }
     enum Fonts {
