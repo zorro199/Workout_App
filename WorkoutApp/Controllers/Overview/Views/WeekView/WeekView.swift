@@ -10,6 +10,8 @@ import SnapKit
 
 final class WeekView: BaseView {
     
+    private let calendar = Calendar.current
+    
     private var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.spacing = 7
@@ -32,6 +34,10 @@ extension WeekView {
     }
     override func configure() {
         super.configure()
-        backgroundColor = .red
+        let weekDays = calendar.shortStandaloneWeekdaySymbols
+        weekDays.forEach { _ in
+            let view = WeekDayView()
+            stackView.addArrangedSubview(view)
+        }
     }
 }
