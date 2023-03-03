@@ -32,7 +32,7 @@ extension WeekView {
             $0.edges.equalToSuperview()
         }
     }
-    override func configure() {
+    override func configure() 
         super.configure()
         let weekDays = calendar.shortStandaloneWeekdaySymbols
         weekDays.forEach { _ in
