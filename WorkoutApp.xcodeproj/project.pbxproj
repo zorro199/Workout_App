@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C1C568C029A7DE8800D9F195 /* OverViewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C568BF29A7DE8800D9F195 /* OverViewNavBar.swift */; };
 		C1C568C229A7DF5000D9F195 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C568C129A7DF5000D9F195 /* BaseView.swift */; };
+		C1C61D2E29B3670A00206BB8 /* Date + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C61D2D29B3670A00206BB8 /* Date + extension.swift */; };
 		C1C6442729A3EDD5005A30EA /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6442629A3EDD5005A30EA /* SecondaryButton.swift */; };
 		C1C6442A29A3F0FD005A30EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C1C6442929A3F0FD005A30EA /* SnapKit */; };
 		C1C6D53029A938C400118B23 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C6D52F29A938C400118B23 /* WeekView.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		C1C568BF29A7DE8800D9F195 /* OverViewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewNavBar.swift; sourceTree = "<group>"; };
 		C1C568C129A7DF5000D9F195 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		C1C61D2D29B3670A00206BB8 /* Date + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + extension.swift"; sourceTree = "<group>"; };
 		C1C6442629A3EDD5005A30EA /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		C1C6D52F29A938C400118B23 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		C1C6D53129A9422D00118B23 /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				C1C8929E299D4B5100D26736 /* UIColor + extension.swift */,
 				C1D6F18B29A2968100D3FD09 /* UIView + extension.swift */,
+				C1C61D2D29B3670A00206BB8 /* Date + extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				C1C6442729A3EDD5005A30EA /* SecondaryButton.swift in Sources */,
 				C1C892A2299D4CD200D26736 /* Resourses.swift in Sources */,
 				C1C89286299D427C00D26736 /* AppDelegate.swift in Sources */,
+				C1C61D2E29B3670A00206BB8 /* Date + extension.swift in Sources */,
 				C1D6F18C29A2968100D3FD09 /* UIView + extension.swift in Sources */,
 				C1D6F18A29A28DEF00D3FD09 /* BaseController.swift in Sources */,
 				C1C568C229A7DF5000D9F195 /* BaseView.swift in Sources */,
