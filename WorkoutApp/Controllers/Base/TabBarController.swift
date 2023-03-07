@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Tabs: Int {
+enum Tabs: Int, CaseIterable {
     case overview
     case session
     case progress
@@ -20,10 +20,15 @@ final class TabBarController: UITabBarController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // You can to call a viewDidLoad
         configure()
+        switchTo(tab: .session)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func switchTo(tab: Tabs) {
+        selectedIndex = tab.rawValue
     }
     
     private func configure() {
@@ -33,38 +38,27 @@ final class TabBarController: UITabBarController {
         tabBar.layer.borderColor = Resourses.Colors.separator.cgColor
         tabBar.layer.borderWidth = 1
         tabBar.layer.masksToBounds = true
-        // viewControllers
-        let overviewController = OverviewController()
-        let sessionController = SessionController()
-        let progressController = ProgressController()
-        let settingsController = SettingController()
         //set NavigationControllers
-        setViewControllers([
-        generateNavController(rootViewController: overviewController,
-                              title: Resourses.Strings.TabBar.overview,
-                              image: Resourses.Images.TabBar.overview,
-                              tag: Tabs.overview.rawValue),
-        generateNavController(rootViewController: sessionController,
-                              title: Resourses.Strings.TabBar.session,
-                              image:  Resourses.Images.TabBar.session,
-                              tag: Tabs.session.rawValue),
-        generateNavController(rootViewController: progressController,
-                              title: Resourses.Strings.TabBar.progress,
-                              image: Resourses.Images.TabBar.progress,
-                              tag: Tabs.progress.rawValue),
-        generateNavController(rootViewController: settingsController,
-                              title: Resourses.Strings.TabBar.settings,
-                              image: Resourses.Images.TabBar.settings,
-                              tag: Tabs.settings.rawValue)
-        ], animated: false)
+        let controllers: [NavBarController] = Tabs.allCases.map { tab in
+            let controller = NavBarController(rootViewController: getController(for: tab))
+            controller.tabBarItem = UITabBarItem(title: Resourses.Strings.TabBar.title(for: tab),
+                                                 image: Resourses.Images.TabBar.icon(for: tab),
+                                                 tag: tab.rawValue)
+            return controller
+        }
+        setViewControllers(controllers, animated: false)
     }
     
-    private func generateNavController(rootViewController: UIViewController, title: String, image: UIImage, tag: Int) -> UIViewController {
-        let navigationVC = NavBarController(rootViewController: rootViewController)
-        navigationVC.tabBarItem.title = title
-        navigationVC.tabBarItem.image = image
-        navigationVC.tabBarItem.tag = tag
-        return navigationVC
+    private func getController(for tab: Tabs) -> BaseController {
+        switch tab {
+        case .overview:
+            return OverviewController()
+        case .session:
+            return SessionController()
+        case .progress:
+            return ProgressController()
+        case .settings:
+            return SettingController()
+        }
     }
-    
 }
