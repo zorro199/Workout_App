@@ -11,7 +11,7 @@ class SettingController: BaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = Resourses.Strings.TabBar.settings
+        title = Resourses.Strings.Settings.settings
     }
 
 

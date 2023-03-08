@@ -22,9 +22,7 @@ extension UIView {
     func addSubviews(_ views: [UIView]) {
         views.forEach { addSubview($0) }
     }
-    func addSubviews(_ views: UIView...) {
-        views.forEach { addSubview($0) }
-    }
+    //animation buttons
     func makeSystem(_ button: UIButton) {
         button.addTarget(self, action: #selector(handleIn), for: [
             .touchDown,

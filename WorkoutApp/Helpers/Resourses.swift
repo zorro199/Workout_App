@@ -18,24 +18,56 @@ enum Resourses {
     }
     enum Strings {
         enum TabBar {
-            static let overview = "Overview"
-            static let session = "Session"
-            static let progress = "Progress"
-            static let settings = "Settings"
+            static func title(for tab: Tabs) -> String {
+                switch tab {
+                case .overview:
+                    return "Overview"
+                case .session:
+                    return "Session"
+                case .progress:
+                    return "Progress"
+                case .settings:
+                    return "Settings"
+                }
+            }
+        }
+        enum NavBar {
+            static let overview = "Today"
         }
         enum Overview {
             static let allWorkoutsButon = "All Workouts"
         }
+        enum Progress {
+            static let progress = "Progress"
+        }
+        enum Settings {
+            static let settings = "Settings"
+        }
+        enum Session {
+            static let session = "Session"
+            static let navBarStart = "Start   "
+            static let navBarPause = "Pause"
+            static let navBarFinish = "Finish"
+        }
     }
     enum Images {
         enum TabBar {
-            static let overview = UIImage(named: "overview_tab") ?? UIImage()
-            static let session = UIImage(named: "session_tab") ?? UIImage()
-            static let progress = UIImage(named: "progress_tab") ?? UIImage()
-            static let settings = UIImage(named: "settings_tab") ?? UIImage()
+            static func icon(for tab: Tabs) -> UIImage? {
+                switch tab {
+                case .overview:
+                    return UIImage(named: "overview_tab") ?? UIImage()
+                case .session:
+                    return UIImage(named: "session_tab") ?? UIImage()
+                case .progress:
+                    return UIImage(named: "progress_tab") ?? UIImage()
+                case .settings:
+                    return UIImage(named: "settings_tab") ?? UIImage()
+                }
+            }
         }
         enum Common {
             static let downArrow = UIImage(named: "down_arrow") ?? UIImage()
+            static let addButton = UIImage(named: "addButton") ?? UIImage()
         }
     }
     enum Fonts {
