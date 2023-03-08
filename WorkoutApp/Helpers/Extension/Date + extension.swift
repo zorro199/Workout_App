@@ -9,7 +9,9 @@ import Foundation
 
 extension Date {
     private var calendar: Calendar {
-        return Calendar.current
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.firstWeekday = 2
+        return calendar
     }
     var startOfweek: Date {
         let components = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)

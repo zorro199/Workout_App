@@ -45,6 +45,9 @@ enum Resourses {
         }
         enum Session {
             static let session = "Session"
+            static let navBarStart = "Start   "
+            static let navBarPause = "Pause"
+            static let navBarFinish = "Finish"
         }
     }
     enum Images {

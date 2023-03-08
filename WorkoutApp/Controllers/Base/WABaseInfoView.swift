@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class WABaseInfoView: BaseView {
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = Resourses.Fonts.helveticaRegular(with: 13)
